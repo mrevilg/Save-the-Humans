@@ -3,35 +3,35 @@ XAML to C# - Desktop App game
 
 /*C# Visual Studio 2017 on windows 10*/
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows;
+    using System.Windows.Controls;
+    using System.Windows.Data;
+    using System.Windows.Documents;
+    using System.Windows.Input;
+    using System.Windows.Media;
+    using System.Windows.Media.Imaging;
+    using System.Windows.Navigation;
+    using System.Windows.Shapes;
 
-using System.Windows.Media.Animation;
-using System.Windows.Threading;
+    using System.Windows.Media.Animation;
+    using System.Windows.Threading;
 
-namespace Save_the_Humans
-{
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    namespace Save_the_Humans
     {
-        Random random = new Random();
-        DispatcherTimer enemyTimer = new DispatcherTimer();
-        DispatcherTimer targetTimer = new DispatcherTimer();
-        bool humanCaptured = false;
+        /// <summary>
+        /// Interaction logic for MainWindow.xaml
+        /// </summary>
+        public partial class MainWindow : Window
+        {
+            Random random = new Random();
+            DispatcherTimer enemyTimer = new DispatcherTimer();
+            DispatcherTimer targetTimer = new DispatcherTimer();
+            bool humanCaptured = false;
 
         public MainWindow()
         {
@@ -178,19 +178,19 @@ namespace Save_the_Humans
 
 /*XAML*/
 
-<Window x:Class="Save_the_Humans.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Save_the_Humans"
-        mc:Ignorable="d"
-        Title="Save the Humans" Height="700" Width="1000">
-    <Window.Resources>
-        <ControlTemplate x:Key="EnemyTemplate" TargetType="{x:Type ContentControl}">
-            <Grid>
-                <Ellipse Fill="Gray" Height="100" Stroke="Black" Width="75"/>
-                <Ellipse Fill="Black" HorizontalAlignment="Center" Height="35" Margin="40,20,70,0" Stroke="Black" VerticalAlignment="Top" Width="25" RenderTransformOrigin="0.5,0.5">
+    <Window x:Class="Save_the_Humans.MainWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:local="clr-namespace:Save_the_Humans"
+            mc:Ignorable="d"
+            Title="Save the Humans" Height="700" Width="1000">
+        <Window.Resources>
+            <ControlTemplate x:Key="EnemyTemplate" TargetType="{x:Type ContentControl}">
+                <Grid>
+                    <Ellipse Fill="Gray" Height="100" Stroke="Black" Width="75"/>
+                    <Ellipse Fill="Black" HorizontalAlignment="Center" Height="35" Margin="40,20,70,0" Stroke="Black" VerticalAlignment="Top" Width="25" RenderTransformOrigin="0.5,0.5">
                     
                     <Ellipse.RenderTransform>
                         <TransformGroup>
