@@ -1,4 +1,5 @@
-# Save-the-Humans
+# Save-the-Humans (Desktop App)
+
 XAML to C# - Desktop App game
 
 /*C# Visual Studio 2017 on windows 10*/
